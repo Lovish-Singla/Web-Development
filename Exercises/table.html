@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 24/07/2022</title>
+</head>
+
+<body>
+    <h1>Tables</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Subscription</th>
+                <th>Price</th>
+                <th>Support Fee</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Free</td>
+                <td>Free</td>
+                <td>N/A</td>
+            </tr>
+
+            <tr>
+                <td>Personal</td>
+                <td>$9.99</td>
+                <td>Weekdays</td>
+            </tr>
+
+            <tr>
+                <td>Business</td>
+                <td>$49.99</td>
+                <td>24/7</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- table -> tag for table 
+    thead -> tag for the header of table 
+    tbody -> tag for the body of of table 
+    tfoot -> tag for the footer of the table like sum or table... 
+    th -> tag for the headings of the table. it boldens the text 
+    td -> tag for the table data
+    tr -> tag for the row. all td's should be written in this tr. Remember thead, tbody, tfoot are NOT like tr. 
+    colspan -> attribute for the the it tells the browser exactly how many columns the specified th should take.
+    rowspan -> attribute for the the it tells the browser exactly how many rows the specified th should take. 
+    Example: -->
+    
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">H1</th>
+                <th colspan="2">H2</th>
+                <th rowspan="2">H3</th>
+            </tr>
+            <tr>
+                <th>h2</th>
+                <th>h3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sub1</td>
+                <td>sub2</td>
+                <td>sub3</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

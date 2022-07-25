@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Practise</title>
+</head>
+
+<body>
+    <h1>Forms!</h1>
+    <hr>
+    <Button>This button exsists outside the form. It doesn't do anything.</Button>
+    <hr>
+    <form action="/Default_Function_of_the_Submit_button.">
+
+        <!--Form are used everywhere in webpages. Its an input type. It takes the input from the user. We can link the data to any table where data can be collected. The "action" attribute is tell the browser to which page it should proceed or to which directory the input should go.-->
+
+        <!-- Forms consist of input tags, label tags and button tags. -->
+
+        <!-- Now Input tags doesn't have a closing tag. <input type="|"> This the basic syntax of input and It has a attribute of type which specifies what type of inut you want to take. There are various types like text(defoult), password, color, number, email, URL, date, time, week etc. They also have placeholder attribute that fills the the input box with the desired placeholder text and id attribute that helps us to link the input type with labels. It is a inline element. Input also have a important attributr called 'name' which is used when the browser sendds the input data to the server. It appears like : ?{The_name_you've_given_to_the_input}={the_input_by_the_user}.
+        Ex.= /?q=github. Here the name is "q" and the input by the user is "github". 
+        Input also have checkboxes type. It can contain attributes like name, id, and checked/unchecked specified to it as in following examples.
+        Another Input type is Radio buttons which rounded and are slightly different from checkboxes in their functionality and that is if they are grouped together then only one button can be clicked. They can be groped together by giving same 'name' attribute. Now with just the name attribute, our form is not able to send the particular data to server. It just sends ?size=on... (following example). So to tell the server, which radio buttorn is selected, We give a 'value' attribute to every radio button and it shouls be different for every button. We can also define an option to be selected by default by defining it selected.
+        Imp input types: range{with attributes of max, min and step}, textarea{with attributs like rows(default=2), cols(default=20)}-->
+
+        <!-- There's also a select tag which funtions as a drop-down enu type. Example si following. -->
+
+        <!-- Labels are the text that tels the user what he is expected to fill in the inpuut type. They have a closing tag. Label tags have for attribute that links the Label tags with the input types. 'id attribute of input tag' and 'for attribute of label tag' should have same name for linking and that name shouls be unique in the entire page. It is a inline element. Syntax: <label>|</label> -->
+
+        <!-- We can also nest the input element into the label element but that is not a conventinal approach. Always prefer to use 'for' and 'id' attributes for 'label' and 'input' tags. -->
+
+        <!-- Button tags create a button and they have a closing tag. It is an inline element. <button>|</button> is the syntax for the button tag. If the button tag is initiated within the form tag, then its default function is to submit the form inputs to the desired place that is mentioned in the action attributr of the form tag. Button tag also have attribute type. This defines the funtion of the button. It can be of siple button type i.e. <button type="button">|</button> which renders the button non-functionable. It can be of submit type which is the defaulst type of the button. -->
+
+        <!-- Form Validations:- required, maxlength, minlength, max, min, pattern... -->
+
+        <p>
+            <label for="name">Enter your user name:</label>
+            <input type="text" id="name" placeholder="Username" name="username">
+        </p>
+
+        <p>
+            <label for="password">Enter your Password:
+                <input type="password" id="password" placeholder="Password">
+            </label>
+        </p>
+
+        <p>
+            <label for="color">Chose a color:</label>
+            <input type="color" id="color" name="color"> <!-- Color type input doesn't have a placeholder attribute. -->
+        </p>
+
+        <p>
+            <label for="num">Choose a number:</label>
+            <input type="number" id="num" placeholder="num" name="num" min="0" max="10000">
+        </p>
+        <div>
+            <button>Submit (This is the default button.) </button>
+        </div>
+
+        <div>
+            <button type="button">This button has the type="button".</button>
+            <label>:"It doesn't do anything"</label>
+        </div>
+
+        <div>
+            <button type="submit">This button hs the type="submit".</button>
+        </div>
+        <p>
+            <button>Submit</button>
+            <input type="submit">
+            <!-- We can also add a clickable button with input tag like above but if we do that it becomes clunkier. If we have to change the text inside the button of input tag, we have add an attribute 'value' and type the desired text inside. -->
+        </p>
+        <p>
+            <button>Submit!!!!</button>
+            <input type="submit" value="Submit!!!!">
+        </p>
+
+    </form>
+    <hr>
+    <h2>Searches</h2>
+    <h3>Search Google</h3>
+    <form action="https://www.google.co.in/search">
+
+        <div>
+            <input type="text" name="q" placeholder="Type Anything">
+            <button>Search Google!</button>
+        </div>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results">
+        <div>
+            <input tupr="text" name="search_query" placeholder="Search Anything">
+            <button>Search Youtube!</button>
+        </div>
+    </form>
+    <h3>Search Wikipedia</h3>
+    <form action="https://en.wikipedia.org/w/index.php">
+        <div>
+            <input type="text" name="search" placeholder="Search Wiki!">
+            <button>Search Wiki!</button>
+        </div>
+    </form>
+    <hr>
+
+    <h2>Some More Inputs:</h2>
+    <form action="/cats">
+        <h3>Checkboxes</h3>
+        <div>
+            <input type="checkbox" id="agree" name="agree" checked>
+            <label>I agree to the Terms of Service.</label>
+        </div>
+
+        <h3>Radio Buttons</h3>
+        <h4>Select shirt Size</h4>
+        <div>
+            <input type="radio" name="size" id="small">
+            <label for="small">Small</label>
+        </div>
+        <div>
+            <input type="radio" name="size" id="medium" checked>
+            <label for="medium">Medium</label>
+        </div>
+        <div>
+            <input type="radio" name="size" id="large">
+            <label for="large">Large</label>
+        </div>
+
+        <h4>Select Any option.</h4>
+        <div>
+            <input type="radio" name="option" id="1" value="option1">
+            <label for="1">Option 1</label>
+        </div>
+        <div>
+            <input type="radio" name="option" id="2" value="option2">
+            <label for="2">Option 2</label>
+        </div>
+        <div>
+            <input type="radio" name="option" id="3" value="option3" checked>
+            <label for="3">Option 3</label>
+        </div>
+    <!-- Now the Information going to the server is /cats?agree=on&size=on&option=option3 . It is telling that the option selected is Option 3.-->
+
+        <h3>Select Options</h3>
+        <h4>Select your gender</h4>
+        <label for="gender">Gender: </label>
+        <select name="gender" id="gender">
+            <option selected>--Please choose a Option--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="pnt">Prefer Not Telling</option>
+        </select>
+
+        <p>
+            <label for="shirts">How many shirts you want?</label>
+            <input type="range" id="shirts" min="1" max="10" step="1" value="3" name="num_of_items">
+        </p>
+
+        <p>
+            <label for="req">any Requests</label><br>
+            <input type="textarea" name="requests" id="req" rows="5" cols="40" placeholder="Any Special Requests for us?">
+        </p>
+        <button>Submit</button>
+
+    </form> 
+
+    <hr>
+
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <p>
+            <label for="first">Enter First Name</label>
+            <input type="text" id="first" name="first" required>
+        </p>
+        <p>
+            <label for="user">Username</label>
+            <input type="text" id="user" name="username" minlength="5" maxlength="20" required>
+        </p>
+
+        <p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+        </p>
+        <p>
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+        </p>
+
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
